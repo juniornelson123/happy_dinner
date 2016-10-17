@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.junior.happydinner.activitys.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/category"
+        android:layout_below="@id/toolbar_main"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/suggery"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/comment"
+            android:text="Lugares Sugeridos"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_weight="1"
+            android:layout_width="1dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/mapmarkermultiple"
+            android:text="Lugares Proximos"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/divisor"
+        android:layout_below="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/material_drawer_shadow_bottom"
+        android:layout_marginBottom="16dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/divisor"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                app:cardElevation="10dp"
+                android:id="@+id/cad_all"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/all"
+                    android:drawableTop="@drawable/check"
+                    android:layout_width="wrap_content"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:text="Todos "/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cad_restaurantes"
+                android:layout_weight="1"
+                app:cardElevation="10dp"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/restaurantes"
+                    android:drawableTop="@drawable/bowl"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurantes"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                app:cardElevation="10dp"
+                android:id="@+id/cad_lanchonetes"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/lanchonetes"
+                    android:drawableTop="@drawable/food"
+                    android:layout_width="wrap_content"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:text="lanchonetes"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cad_bar"
+                android:layout_weight="1"
+                app:cardElevation="10dp"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/bar"
+                    android:drawableTop="@drawable/beer"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:text="Bares/Pub"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
